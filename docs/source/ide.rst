@@ -1,0 +1,5 @@
+IDE
+===
+
+.. autosummary::
+   :toctree: generated
