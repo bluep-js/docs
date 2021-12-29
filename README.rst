@@ -10,7 +10,7 @@ Documentation Installation
 
    $ python -m venv .venv
    $ source .venv/bin/activate
-   (.venv)$ python -m pip install sphinx sphinx_rtd_theme
+   (.venv)$ python -m pip install sphinx sphinx_rtd_theme sphinx_js
 
 Local Build
 ============

@@ -7,7 +7,7 @@ copyright = '2021, Evgeny Trifonov <abrakadobr@gmail.com>'
 author = 'Evgeny Trifonov'
 
 release = '0.1'
-version = '0.1.1'
+version = '0.1.2'
 
 # -- General configuration
 
@@ -17,7 +17,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_js'
 ]
+
+js_source_path = '../../../vm/src'
+primary_domain = 'js'
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),

@@ -50,3 +50,4 @@ Contents
    blueprint
    ide
    vm
+   dev
