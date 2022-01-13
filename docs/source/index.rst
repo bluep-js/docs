@@ -41,13 +41,27 @@ Version numbers for @bluepjs are: **MAJOR.MINOR.PATCH**.
 
    Please, check https://github.com/bluep-js/example project for demo.
 
+Changelog
+---------
+
+**0.1.2**
+
+  * VM should be started to run. VM also can be stopped.
+  * Modules API for start/stop
+  * Modules can provide types, enums and structs
+  * Templates support for IDE (type ``basic/template``)
+  * bugfixes
+
+**0.1.1**
+
+  * IDE limited to use only ``Default`` library
+  * buxfixes
+
 Contents
 --------
 
 .. toctree::
 
-   intro
-   blueprint
-   ide
-   vm
-   dev
+   Intro <intro.rst>
+   User's documentation <user.rst>
+   Developer's guides <dev.rst>

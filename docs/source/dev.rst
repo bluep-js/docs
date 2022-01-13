@@ -1,13 +1,6 @@
 @bluepjs API
 ============
 
-Virtual Machine
----------------
+.. toctree::
 
-Virtual Machine class:
-
-.. js:autoclass:: Vm
-   :members:
-
-Node
-----
+   Virtual Machine Class <./dev/api.rst>
