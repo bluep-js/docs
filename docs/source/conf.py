@@ -6,10 +6,13 @@ project = '@bluepjs'
 copyright = '2021, Evgeny Trifonov <abrakadobr@gmail.com>'
 author = 'Evgeny Trifonov'
 
-release = '0.1'
-version = '0.1.2'
+release = '0.2'
+version = '0.2.2'
 
 # -- General configuration
+import sys, os
+
+sys.path.append(os.path.abspath('ext'))
 
 extensions = [
     'sphinx.ext.duration',
@@ -17,10 +20,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx_js'
+    'sphinx_js',
+    'bluep'
 ]
 
-js_source_path = '../../../vm/src'
+js_source_path = '../../source/vm/src'
 primary_domain = 'js'
 
 intersphinx_mapping = {
