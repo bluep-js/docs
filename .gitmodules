@@ -1,0 +1,3 @@
+[submodule "source/vm"]
+	path = source/vm
+	url = https://github.com/bluep-js/vm
