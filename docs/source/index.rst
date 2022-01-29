@@ -17,7 +17,7 @@ Version compatibility
 
 Version numbers for @bluepjs are: **MAJOR.MINOR.PATCH**.
 
-There is no guarantee of back-compatibility between versions now, sorry. Some functionality of new versions rebuilds some old temporary solutions and version update until ``1.0.x`` defenetly will require `Library` rebuild.
+There is no guarantee of back-compatibility between versions now, sorry. Some functionality of new versions rebuilds some old temporary solutions and version update until ``1.0.x`` defenetly will require manual `Library` rebuild on some versions update.
 
 **MAJOR**
 
@@ -41,6 +41,21 @@ There is no guarantee of back-compatibility between versions now, sorry. Some fu
 
 Changelog
 ---------
+
+**0.3.4**
+
+ * ``AbstractModule::metadata()`` for module dynamic metadata
+ * ``AbstractModule::vm()``
+ * ``AbstractActor::metadata()`` for actor dynamic metadata
+ * ``AbstractNode::context()``
+ * Node multiple slots
+ * multiple slots for string/append, boolean/and, boolean/or
+ * OOP support, node "cast to"
+ * node "Switch .. case"
+ * node number/plus
+ * types basic/date; basic/time
+ * ``async Vm::start()`` / ``async Vm::stop()``
+ * ``Vm::runModuleEvent(info, inputs)`` for easy run simple events
 
 **0.2.2**
 

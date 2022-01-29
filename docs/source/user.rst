@@ -5,4 +5,4 @@
 
    Blueprints <./user/blueprint.rst>
    IDE <./user/ide.rst>
-   VM <./user/vm.rst>
+   Nodes <./user/nodes.rst>

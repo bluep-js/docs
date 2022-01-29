@@ -12,6 +12,8 @@ Virtual Machine (VM)
 
 *npm install @bleupjs/vm*
 
+**VM** can be used both in browser and nodejs side in same way.
+
 Integrated Development Environment (IDE)
 ----------------------------------------
 
@@ -60,12 +62,6 @@ Module
 **@bluepjs** designed to be expandable with 3-rd party code organized into special **Modules**.
 
 **Modules** are designed to be imported/exported by programmers (**Developers**) and may contain new **Nodes**, **Libraries**, **Events**, **Actors** and other entities to expand and organize **@bluepjs** functionaly and can be universal or **App** specific.
-
-.. note::
-
-   Right now modules can add only new **Nodes** and "Global" **Events**
-
-   Full support of all functionality will be added in next versions
 
 Libraries (Libs)
 ----------------
@@ -149,6 +145,14 @@ For example:
 
 .. image:: ./_static/intro-modifier-node.png
    :alt: Modifier Node example
+
+Getter Nodes
+~~~~~~~~~~~~
+
+**getters** - this **Nodes**, same as **modifiers** doesn't have **Executable Slots**. Also, they don't have **Input slots** and have only **Output slots** (regulary - one).
+
+.. image:: ./_static/intro-getter-node.png
+   :alt: Getter Node example
 
 Slots (Node Slots)
 ------------------

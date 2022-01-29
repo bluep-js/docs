@@ -1,3 +1,6 @@
 [submodule "source/vm"]
 	path = source/vm
 	url = https://github.com/bluep-js/vm
+[submodule "source/example"]
+	path = source/example
+	url = https://github.com/bluep-js/example

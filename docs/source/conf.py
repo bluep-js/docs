@@ -3,11 +3,11 @@
 # -- Project information
 
 project = '@bluepjs'
-copyright = '2021, Evgeny Trifonov <abrakadobr@gmail.com>'
+copyright = '2021-2022, Evgeny Trifonov <abrakadobr@gmail.com>'
 author = 'Evgeny Trifonov'
 
-release = '0.2'
-version = '0.2.2'
+release = '0.3'
+version = '0.3.3'
 
 # -- General configuration
 import sys, os
