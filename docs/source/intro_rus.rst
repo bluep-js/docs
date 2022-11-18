@@ -1,7 +1,7 @@
 Введение и термины
 ==================
 
-В этой главе основные термины **@bluepjs** будут представлены без подробных деталей.
+В этой главе основные термины будут представлены **@bluepjs** без подробных деталей.
 
 **@bluepjs** состоит из двух основных частей:
 
@@ -12,7 +12,7 @@
 
 *npm install @bleupjs/vm*
 
-**VM** может использоваться как в браузере, так и nodejs тем же способом.
+**VM** может использоваться как в браузере, так и в nodejs.
 
 Интегрированная среда разработки (IDE)
 --------------------------------------
@@ -21,17 +21,17 @@
 
 *npm install @bleupjs/vue3-ide*
 
-.. примечание::
+.. Note::
 
    Ok, если быть точным в терминологии, это не "REAL IDE" - сейчас это больше "editor".
    
    "Full IDE" должна также включать "среду исполнения/отладки", и эта часть будет полностью реализована позже.
 
-.. примечание::
+.. Note::
 
-   В настоящее время IDE построена на Vue3 и предоставляется как модуль Vue3e.
+   В настоящее время IDE построена на Vue3 и предоставляется как модуль Vue3.
 
-   vite/nuxt/pure/react/etc версия будет разработана позже.
+   vite/nuxt/pure/react/etc версии будут разработана позже.
 
 Обе части являются независимыми пакетами, поэтому их можно использовать по мере необходимости.
 
@@ -44,12 +44,12 @@ Application (App)/Приложение
 
 Он предназначен для включения в другие приложения в качестве скриптового движка для объектов приложений.
 
-В данной документации разработано приложение, использующее **@bluepjs** движок с именем **Application** (или **App**)
+В данной документации разрабатываемое приложение, использующее **@bluepjs** именуется **Application** (или **App**).
 
 Developer/Разработчик
 -----------------------
 
-Человек (или группа людей), который разрабатывает **Application/Приложение**, **Modules/Модули** or **Libraries/Библиотеки**.
+Человек (или группа людей), который разрабатывает **Application/Приложение**, **Modules/Модули** или **Libraries/Библиотеки**.
 
 User/Пользователь
 -----------------
@@ -61,18 +61,18 @@ Module/Модуль
 
 **@bluepjs** разработан таким образом, чтобы его можно было расширять за счет стороннего кода, организованного в специальные **Modules/Модули**.
 
-**Modules/Модули** предназначены для импорта/экспорта программистами (**Developers/Разработчиками**) и могут содержать новые **Nodes/узлы**, **Libraries/библиотеки**, **Events/события**, **Actors/акторы** и другие объекты для расширения и организации **@bluepjs** функциональности и могут быть универсальными илиспецифичными для каждого **App/приложения**.
+**Modules/Модули** предназначены для импорта/экспорта программистами (**Developers/Разработчиками**) и могут содержать новые **Nodes/узлы**, **Libraries/библиотеки**, **Events/события**, **Actors/акторы** и другие объекты для расширения и организации **@bluepjs** функциональности и могут быть универсальными или специфичными для каждого **App/приложения**.
 
 Libraries (Libs)/Библиотеки
 ---------------------------
 
 **Blueprints** хранятся и организуются в **Libraries/библиотеки**.
 
-**@bluepjs** не заботится о хранении **Libraries/библиотек** - эта часть должна выполняться **Application/приложениями** - структура **Library/библиотек** совместима с JSON и может быть легко сохранена различными способами.
+**@bluepjs** не заботится о хранении **Libraries/библиотек** - эта часть должна выполняться **Application/приложениями** - структура **Library/библиотек** совместима с JSON форматом и может быть легко сохранена различными способами.
 
 **Libraries/библиотеки** предназначены для импорта /экспорта *обычными пользователями* в виде *модулей многократного использования* и хранения всего необходимого содержимого *модуля многократного использования* и скриптов.
 
-.. примечание::
+.. Note::
 
    Прямо сейчас поддерживается только одна библиотека "По умолчанию".
 
@@ -81,120 +81,120 @@ Libraries (Libs)/Библиотеки
 Actors/Акторы
 -------------
 
-**Application/приложения** по сути управляемые **VM/ВМ** in **@bluepjs** под названием **Actors/Акторы**.
+Сущности **Application/приложения**, управляемые **VM/ВМ** в **@bluepjs** называются **Actors/Акторы**.
 
-Они разработаны **Developer/Разработчиком** и относятся к **Application/Приложениям**, **Library/Библиотекам** или **Module/Модулям**.
+Они разрабатываются **Developer/Разработчиками** и относятся к **Application/Приложениям**, **Library/Библиотекам** или **Module/Модулям**.
 
 **Actors/Акторы** могут иметь:
 
   * **State/Состояние** - свойства **Actor/Актора** только для чтения.
   * **Methods/Методы** - действия, выполняемые **Actor/Актором**.
-  * **Events/События** - действия, выполняемые **Actor/Актором** и управляемые **VM/ВМ**.
+  * **Events/События** - сигналы, исходящие от **Actor/Акторов** и управляемые **VM/ВМ**.
 
-Events
-------
+Events/События
+--------------
 
-**VM** designed to manage events from **Actors** (**Actor event**) and from **Modules** (also named in  documentation as **Global Event** or **VM Event**).
+**VM/ВМ** предназначена для управления событиями от **Actors/Акторов** (**Actor event/События акторов**) и от **Modules/Модулей** (также названных в документации как **Global Event/Глобальное событие** или **VM Event/Событие ВМ**).
 
-**Events** may have **Outputs** to transmit event data into **Blueprint**.
+**Events/События** могут иметь **Outputs/Выходы** для передачи данных о событиях в **Blueprint**.
 
-**Global Events** may have **Configuration** fields for specific tuning.
+**Global Events/Глобальные события** могут иметь поля **Configuration/Конфигурация** для специфической настройки.
 
 .. note::
 
-   In this documentation term **Event** without specification to "Actor", "Global" or "VM" should be specified by context.
+   В данной документации термин **Event/Событие** без указания на "Actor/Актора", "GlobalГлобальный" или "VM/ВМ" должен уточняться по контексту.
 
 Blueprints
 ----------
 
-**Library** scriptable entities. Can be:
+**Library/Библиотеки** скриптуемых сущностей. Могут быть:
 
-  * **Library** **Function** script
-  * **Library** **Class** **Method** script
-  * **Library** **Event** script
+  * **Library/Библиотека** **Function/Функция** скрипт
+  * **Library/Библиотека** **Class/Класс** **Method/Метод** скрипт
+  * **Library/Библиотека** **Event/Событие** скрипт
     
-**Blueprints** are constructed with **Nodes** and **Edges** into **Execution Flow** in **IDE**
+**Blueprints** создаются с помощью **Nodes/Узлов** и **Edges/Переходов** в **Execution Flow/Потоке выполнения** в **IDE**.
 
-Nodes
------
+Nodes/Узлы
+----------
 
-**Nodes** are minimal **Blueprint** scripting block. They can represent Java Script code provided by **Developers** or other **Libraries** **Blueprints**.
+**Nodes/Узлы**- это минимальный блок сценария **Blueprint**. Они могут представлять код Java Script, предоставленный **Developers/Разработчиками** или другими **Libraries/Библиотеками** **Blueprints**.
 
-**Nodes** has **Inputs** and **Outputs** and may be two different types:
+**Nodes/Узлы** имеют **Inputs/Входы** и **Outputs/Выходы** и могут быть двух различных типов:
 
-Executable Nodes
-~~~~~~~~~~~~~~~~
+Executable Nodes/Исполняемые узлы
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This **Nodes** has special **Executable Input** and at least one **Executable Output** for **Execution Flow**
+Эти **Nodes/Узлы** имеют специальный **Executable Input/Исполняемый вход** и по крайней мере один **Executable Output/Исполняемый выход** для **Execution Flow/Потока исполнения**.
 
-For example:
+Например:
 
 .. image:: ./_static/intro-executable-node.png
    :alt: Executable Node example
 
 .. note::
 
-   **Executable Nodes** are easy recognized by having header
+   **Executable Nodes/Исполняемые узлы** легко распознаются по наличию заголовка.
 
-Modifier Nodes
-~~~~~~~~~~~~~~
+Modifier Nodes/Узлы-модификаторы
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**modifiers** - this **Nodes** doesn't have **Executable Inputs** or **Executable Outputs** and **Execution Flow** of this **Nodes** depends on **Edges**
+**modifiers/модификаторы** - у этих **Nodes/Узлов** нет **Executable Inputs/Исполняемых входов** или **Executable Outputs/исполняемых выходов**, и **Execution Flow/Поток выполнения** этих **Nodes/Узлов** зависит от **Edges/Переходов**.
 
-For example:
+Например:
 
 .. image:: ./_static/intro-modifier-node.png
    :alt: Modifier Node example
 
-Getter Nodes
-~~~~~~~~~~~~
+Getter Nodes/Узлы-получатели
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**getters** - this **Nodes**, same as **modifiers** doesn't have **Executable Slots**. Also, they don't have **Input slots** and have only **Output slots** (regulary - one).
+**getters/получатели** - это **Nodes/узлы**, такие же, как **modifiers\модификаторы**, не имеют **Executable Slots/исполняемых слотов**. Кроме того, у них нет **Input slots/входных слотов** и есть только **Output slots/выходные слоты** (обычно - один).
 
 .. image:: ./_static/intro-getter-node.png
    :alt: Getter Node example
 
-Slots (Node Slots)
-------------------
+Slots (Node Slots)/Слоты (Узловые слоты)
+----------------------------------------
 
-**Slot** in this documentation is a common name for any **Node** **Input** or **Output**, so there are **Input Slots** and **Output Slots**
+**Slot/Слот** в этой документации является общим названием для любого **Node/узла** **Input/ввода** или **Output/вывода**, поэтому существуют **Input Slots/Слоты ввода** и **Output Slots/Слоты вывода**.
 
-**Slot** color and shape visually represents slot data type.
+Цвет и форма **Slot/Слота** визуально представляют тип данных слота.
 
-**Slots** can be connected o disconnected, for example:
+**Slots/Слоты** могут быть соединены или разъединены, например:
 
-Connected **Input Slot** of type ``basic/datetime`` named "Datetime"
+Подключен **Input Slot/Входной слот** типа ``basic/datetime`` с именем "Datetime"
 
 .. image:: ./_static/intro-connected-slot.png
    :alt: Connected Input Datetime Slot
 
-Disconnected **Input Slot** of type ``basic/string`` with manual value "Cron at "
+Отключенный **Input Slot/Входной слот** типа ``basic/string`` с ручным значением "Cron at "
 
 .. image:: ./_static/intro-disconnected-slot.png
    :alt: Disconnected Input String Slot
 
-Disconnected **Input Slots** values may be inputed manually
+Отключенные **Input Slots/Входные слоты** значения могут быть введены вручную.
 
-Edges (Connections)
--------------------
+Edges (Connections)/Грани (соединения)
+--------------------------------------
 
-**Nodes** connected together with **Edges** by **Slots**.
+**Nodes/Узлы**, соединенные вместе с **Edges/Переходами** посредством **Slots/Слотов**.
 
-**Edge** color represents data type of connected **Slots**
+Цвет **Edge/Перехода** представляет тип данных подключенных **Slots**.
 
-For example - **Edge** of type ``basic/datetime`` connecting **Output Slot** named "Now" with **Input Slot** named "Datetime"
+Например: **Edge/Переход** типа ``basic/datetime`` соединяет **Output Slot/Выходной слот** с именем "Now" и **Input Slot/Входной слот** с именем "Datetime"
 
 .. image:: ./_static/intro-edge.png
    :alt: Edge of type datetime
 
-Execution Flow
---------------
+Execution Flow/Поток выполнения
+-------------------------------
 
-Way of **Nodes** ordering for execution defined by connecting **Nodes** with **Execution Slots**
+Способ упорядочивания **Nodes/Узлов** для выполнения определяется путем соединения **Nodes/Узлов** со **Execution Slots/Слотами выполнения**
 
 .. image:: ./_static/intro-execution-flow.png
    :alt: Execution flow example
 
-On example image **Execution Edges** are **a**, **b** and **c** and they define **Nodes** execution order.
+На примере изображения **Execution Edges/Слотами выполнения** являются **a**, **b** и **c**, и они определяют порядок выполнения **Nodes/Узлов**.
 
-Deeper information about **Execution Flow** will be covered in next chapter.
+Более подробная информация о **Execution Flow/потоке выполнения** будет рассмотрена в следующей главе.

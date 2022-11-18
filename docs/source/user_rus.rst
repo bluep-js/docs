@@ -3,6 +3,6 @@
 
 .. toctree::
 
-   Blueprints <./user/blueprint.rst>
-   IDE <./user/ide.rst>
-   Nodes <./user/nodes.rst>
+   Blueprints <./user/blueprint_rus.rst>
+   IDE <./user/ide_rus.rst>
+   Nodes <./user/nodes_rus.rst>
