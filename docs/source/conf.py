@@ -24,7 +24,7 @@ extensions = [
     'bluep'
 ]
 
-js_source_path = './source/vm/src'
+js_source_path = '../../source/vm/src'
 primary_domain = 'js'
 
 intersphinx_mapping = {
@@ -34,10 +34,6 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
-
-html_theme_options = {
-    'navigation_depth': 4,
-}
 
 # -- Options for HTML output
 
