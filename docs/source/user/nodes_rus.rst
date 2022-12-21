@@ -1,0 +1,465 @@
+Default Nodes/Узлы по умолчанию
+===============================
+
+**@bluepjs** роставляется с набором **Nodes/Узлов** по умолчанию. Новые **Nodes/Узлы** могут быть добавлены **Developers/Разработчиками**
+
+.. note::
+
+   Текущий список **Nodes/Узлов** невелик, потому что был разработан "on demand/по требованию" и не содержит всех основных операций с различными типами.
+
+   Новые **Nodes/Узлы** будут обновлены в следующих версиях.
+
+Booleans/Логические значения(Булевы)
+------------------------------------
+
+And/И (A && B)
+~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/boolean-and-or.png
+   :alt: boolean and
+
+Узел-модификатор с несколькими входами.
+
+Устанавливает выход "Result/Результат" как логическое AND/И из входов.
+
+Or/ИЛИ (A || B)
+~~~~~~~~~~~
+
+.. image:: ../_static/nodes/boolean-and-or.png
+   :alt: boolean or
+
+Узел-модификатор с несколькими входами.
+
+Устанавливает выход "Result/Результат" как логическое OR/ИЛИ из входов.
+
+Not/Нет (!A)
+~~~~~~~~
+
+.. image:: ../_static/nodes/boolean-not.png
+   :alt: boolean not
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" как логическое NOT/НЕТ из входов.
+
+Equal/Равно (A === B)
+~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/boolean-eq.png
+   :alt: boolean eq
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" как A === B
+
+Numbers/Числа
+-------------
+
+Equal/Равно (A === B)
+~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/number-eq.png
+   :alt: number eq
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" как A === B
+
+Is even/является четным
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/number-is-even.png
+   :alt: number is even
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" в ``true``, если входное число четное.
+
+Greater or equal then/Больше или равно тогда
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/number-gte.png
+   :alt: number is greater or equal then
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" в ``true``, если вход A больше входа B (или равен, если логический ввод равен ``true``).
+
+To String/К строке
+~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/number-to-string.png
+   :alt: number to string
+
+Узел-модификатор.
+
+Переводит к номеру строки.
+
+Plus/Плюс (A + B)
+~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/number-plus.png
+   :alt: number plus
+
+Узел-модификатор с несколькими входами.
+
+Устанавливает выход "Result/Результат" как сумма входных данных.
+
+Strings/Строки
+--------------
+
+Append/Добавление (A + B)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/string-append.png
+   :alt: string append
+
+Узел-модификатор с несколькими входами.
+
+Устанавливает выход "Result/Результат" как объединение входных данных.
+
+Datetime/Дата и время
+---------------------
+
+.. note::
+
+   **@bluepjs** использует библиотеку ``dayjs`` (`website <https://day.js.org/>`_) для управления датой/временем/временем суток.
+
+Create/Создать
+~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/datetime-create.png
+   :alt: datetime create
+
+Узел-модификатор.
+
+Создает объект ``basic/datetime``, используя ввод чисел.
+
+Unwrap/Развернуть
+~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/datetime-unwrap.png
+   :alt: datetime unwrap
+
+Узел-модификатор.
+
+Разворачивает объект ``basic/datetime`` в числа.
+
+To String/К строке
+~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/datetime-to-string.png
+   :alt: datetime to string
+
+Узел-модификатор.
+
+Форматирует ``basic/datetime`` в строку по шаблону формата.
+
+.. note::
+
+   Проверьте ``документацию по форматам`` `dayjs <https://day.js.org/docs/en/display/format>`_.
+
+Now/Сейчас
+~~~~~~~~~~
+
+.. image:: ../_static/nodes/datetime-now.png
+   :alt: datetime now
+
+Исполняемый узел.
+
+Создает выход ``basic/datetime`` с текущими датой/временем.
+
+Undefined/Неопределено
+----------------------
+
+Is undefined/Является неопределенным
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/undefined-is.png
+   :alt: is undefined
+
+Узел-модификатор.
+
+Устанавливает выход "Result/Результат" в ``true```, если входные данные не определены.
+
+.. note::
+
+   javascript: ``typeof input === 'undefined'``
+
+Branches and execution flow/Ветви и поток выполнения
+----------------------------------------------------
+
+For/Для
+~~~~~~~
+
+.. image:: ../_static/nodes/flow-for.png
+   :alt: for loop
+
+Исполняемый узел.
+
+Для цикла итерации 'from-to-step/от шага к шагу'
+
+Each
+~~~~
+
+.. image:: ../_static/nodes/flow-each.png
+   :alt: each loop
+
+Executable node.
+
+Each loop to iterate arrays.
+
+If
+~~
+
+.. image:: ../_static/nodes/flow-if.png
+   :alt: if/else node
+
+Executable node.
+
+If/else node.
+
+Switch .. case
+~~~~~~~~~~~~~~
+
+.. image:: ../_static/nodes/flow-switch.png
+   :alt: switch .. case
+
+Executable node with multiple inputs/outputs.
+
+Switch .. case node.
+
+Call
+~~~~
+
+.. image:: ../_static/user-blueprint-call-node.png
+   :alt: Call Node example
+
+Executable node.
+
+Autogenerated by IDE. Can't be added/removed manualy.
+
+Return
+~~~~~~
+
+.. image:: ../_static/user-blueprint-return-node.png
+   :alt: Return Node example
+
+Executable node.
+
+Can be added for **Functions** with outputs.
+
+Wait
+~~~~
+
+.. image:: ../_static/nodes/flow-wait.png
+   :alt: wait
+
+Executable node.
+
+Pause execution flow for ms input.
+
+Function
+~~~~~~~~
+
+.. image:: ../_static/nodes/flow-function.png
+   :alt: function example
+
+Dynamic executable node.
+
+Autogenerated by IDE nodes for each available **Function**.
+
+.. note::
+
+   Colorize function described in extended integration example
+
+Others
+------
+
+Console log
+~~~~~~~~~~~
+
+.. image:: ../_static/nodes/console-log.png
+   :alt: console log
+
+Executable node.
+
+Prints message to **Vm** console.
+
+Enums
+-----
+
+Enums nodes are autogenerated by IDE for each **enum**
+
+Equal
+~~~~~
+
+.. image:: ../_static/nodes/enum-eq.png
+   :alt: enum equal
+
+Modifier node.
+
+Check if inputs are same.
+
+To String
+~~~~~~~~~
+
+.. image:: ../_static/nodes/enum-to-string.png
+   :alt: enum to string
+
+Modifier node.
+
+Stringify input enum value.
+
+Structs
+-------
+
+Structs nodes are autogenerated by IDE for each **struct**.
+
+.. note::
+
+   Struct on images described in extended integration example.
+
+Pack
+~~~~
+
+.. image:: ../_static/nodes/struct-pack.png
+   :alt: struct pack
+
+Modifier node.
+
+Creates **struct** by fields.
+
+Unpack
+~~~~~~
+
+.. image:: ../_static/nodes/struct-unpack.png
+   :alt: struct unpack
+
+Modifier node.
+
+Unpack **struct** by fields.
+
+To Object
+~~~~~~~~~
+
+.. image:: ../_static/nodes/struct-to-object.png
+   :alt: struct to object
+
+Modifier node.
+
+Convert type from struct type to ``basic/object`` (javascript object)
+
+From Object
+~~~~~~~~~~~
+
+.. image:: ../_static/nodes/struct-from-object.png
+   :alt: struct from object
+
+Modifier node.
+
+Convert type from ``basic/object`` (javascript object) to **struct** type.
+
+Function inputs/outputs/variables, class properties
+---------------------------------------------------
+
+For any **Function** (simple function, event function, class constructor or method) there are autogenerated by IDE getters and setters **Nodes**.
+
+Generating depends on variable context and access for class properties.
+
+Get
+~~~
+
+Get **Function** variable:
+
+.. image:: ../_static/nodes/get-variable.png
+   :alt: get function variable
+
+Get **Class** property:
+
+.. image:: ../_static/nodes/get-property.png
+   :alt: get class property
+
+Getter node.
+
+Get required variable/property. For **Classes** takes object of class to modify.
+
+Set
+~~~
+
+Set **Function** variable:
+
+.. image:: ../_static/nodes/set-variable.png
+   :alt: set function variable
+
+Set **Class** property:
+
+.. image:: ../_static/nodes/set-property.png
+   :alt: set class property
+
+Executable node.
+
+Set required variable/property. For **Classes** takes object of class to modify.
+
+Classes
+-------
+
+Classes **Nodes** are autogenerated by **Classes** and **Actors**.
+
+This
+~~~~
+
+.. image:: ../_static/nodes/class-this.png
+   :alt: class this
+
+Getter node.
+
+Exists only in **Class** methods and constructor blueprints. Returns "this" pointer of object.
+
+Cast to
+~~~~~~~
+
+.. image:: ../_static/nodes/class-cast-to.png
+   :alt: class this
+
+Modifier node.
+
+Exists only when some **Classes** **Inheritance** is found. Convers object type from parent type to child type.
+
+New
+~~~
+
+.. image:: ../_static/nodes/class-new.png
+   :alt: class new
+
+Executalbe dynamic node.
+
+Exists only when some **Classes** exists. Creates new object of class. **Node** inputs are autogenerated by selected constructor inputs.
+
+Constructor
+~~~~~~~~~~~
+
+.. image:: ../_static/nodes/class-constructor.png
+   :alt: class constructor
+
+Executalbe dynamic node.
+
+Exists only when some **Classes** **Inheritance** exists in child classes constructors. Allows call (or not) parent class constructors.
+
+.. note::
+
+   Example image demostractes "Demo class 2" constructor. "Demo class 2" defined as extends from "Demo Class 1".
+
+Method
+~~~~~~
+
+.. image:: ../_static/nodes/class-method.png
+   :alt: class method
+
+Executalbe dynamic node.
+
+Autogenerated by IDE for **Classes**/**Actors** methods with accesibility checking (public/protected/private/...). Takes object to use as input.
+
+.. note::
+
+   Colorize function described in extended integration example
