@@ -219,7 +219,7 @@ If/Если
 
 Узел If(если)/else(кроме).
 
-Switch .. case/Переключатель случаев
+Switch .. case
 ~~~~~~~~~~~~~~
 
 .. image:: ../_static/nodes/flow-switch.png

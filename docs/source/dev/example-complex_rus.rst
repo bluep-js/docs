@@ -30,20 +30,20 @@ Module/Модуль
    :language: javascript
    :linenos:
 
-**Module** defines:
+**Module/Модуль** определяет:
 
- * **enum** ``html/color`` with pairs of ``cssColor`` - ``Color name``. Full type code is ``bluep/enum/html/color``
- * **struct** ``element/colors`` with fileds ``background`` and ``text``. Full type code is ``bluep/struct/element/colors``
- * special color for **struct**
- * class ``html/element`` describes parent class of module actors. Because parent class is never directly used by **Vm** - it's metadata can't be directly accessible (from class metadata) and provided in module metadata.
+ * **enum** ``html/color`` с парами ``cssColor`` - ``Color name``. Полный код типа ``bluep/enum/html/color``
+ * **struct** ``element/colors`` с файлами ``background`` и ``text``. Полный код типа ``bluep/struct/element/colors``
+ * специальный цвет для **struct**
+ * класс ``html/element`` описывает родительский класс модуля акторы. Поскольку родительский класс никогда напрямую не используется **Vm** - его метаданные не могут быть доступны напрямую (из метаданных класса) и предоставляются в метаданных модуля.
 
- Because of not really nice demo architecture (IDE using "backend Vm", and demo module runs only on frontent) - module initialization is "tricky" and we initialize "empty" actors just to get module/actors information for **IDE**
+ Из-за не очень хорошей демонстрационной архитектуры (IDE использует "backend Vm/серверную виртуальную машину", а демонстрационный модуль работает только на интерфейсе) - инициализация модуля "сложная", и мы инициализируем "пустые" актеры только для получения информации о модуле / актерах для ** IDE**
 
 .. literalinclude:: ../../../source/example/server.js
    :language: javascript
    :lines: 16-18
 
-But on frontend module initialized with real DOM elements:
+Но на интерфейсном модуле, инициализированном реальными элементами DOM:
 
 .. literalinclude:: ../../../source/example/src/views/About.vue
    :language: javascript
@@ -53,44 +53,44 @@ But on frontend module initialized with real DOM elements:
 
    ``$refs`` is part of Vue 3 framework.
 
-Actors
-------
+Actors/Акторы
+-------------
 
 html/element
 ~~~~~~~~~~~~
 
-Base class for actors in this demo named "HTML Element" (with code "html/element").
+Базовый класс для актеров в этой демонстрации называется "HTML Element" (с кодом "html/element").
 
 .. literalinclude:: ../../../source/example/src/vm/element.actor.js
    :caption: example/src/vm/element.actor.js
    :language: javascript
    :linenos:
 
-Take attention to ``_state`` defenition (line 19). State described at **Module** metadata as variable with code ``colors`` typeof ``bluep/struct/element/colors``.
+Обратите внимание на определение ``_state`` (строка 19). Состояние описано в **Module** метаданных как переменная с кодом ``colors`` типа ``bluep/struct/element/colors``.
 
 .. literalinclude:: ../../../source/example/src/vm/page.module.js
    :language: javascript
    :lines: 64-72
 
-Struct ``element/colors`` described having 2 fileds type of ``bluep/enum/html/color``:
+Структура ``element/colors`` описана с 2 файлами типа ``bluep/enum/html/color``:
 
 .. literalinclude:: ../../../source/example/src/vm/page.module.js
    :language: javascript
    :lines: 33-49
 
-And enum type ``html/color`` described with next values:
+И тип перечисления ``html/color`` описан со следующими значениями:
 
 .. literalinclude:: ../../../source/example/src/vm/page.module.js
    :language: javascript
    :lines: 18-29
 
-As result state definition is:
+В результате определение состояния имеет вид:
 
 .. literalinclude:: ../../../source/example/src/vm/element.actor.js
    :language: javascript
    :lines: 19-25
 
-``colorize`` method, described at **Module** metadata is simple - it updated state ``colors`` variable and css styles of html element accordingly.
+Метод ``colorize``, описанный в **Module** метаданных, прост - он обновляет состояние переменной ``colors`` и css стили html элемента соответственно.
 
 .. literalinclude:: ../../../source/example/src/vm/element.actor.js
    :language: javascript
@@ -99,19 +99,19 @@ As result state definition is:
 html/div
 ~~~~~~~~
 
-Div Actor is very simple:
+Div Actor очень прост:
 
 .. literalinclude:: ../../../source/example/src/vm/div.actor.js
    :caption: src/vm/div.actor.js
    :language: javascript
    :linenos:
 
-Actor just extends ``html/element`` class. But actors of this class will be used by **Vm**, so there is ``static metadata()`` method, describing it.
+Актор просто расширяет класс ``html/element``. Но акторы этого класса будут использоваться **Vm**, поэтому существует метод ``static metadata()``, описывающий его.
 
 html/button
 ~~~~~~~~~~~
 
-Button Actor has additional event ``click``
+Кнопка Actor имеет дополнительное событие ``click``
 
 .. literalinclude:: ../../../source/example/src/vm/button.actor.js
    :caption: src/vm/button.actor.js
